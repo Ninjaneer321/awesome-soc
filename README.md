@@ -11,7 +11,7 @@ NB: Generally speaking, SOC here refers to detection activity, and CERT/CSIRT to
 * [Must read](https://github.com/cyb3rxp/awesome-soc/blob/main/README.md#must-read)
 * [Fundamental concepts](https://github.com/cyb3rxp/awesome-soc/blob/main/soc_basics.md)
 * [Mission-critical means (tools/sensors)](https://github.com/cyb3rxp/awesome-soc/blob/main/README.md#mission-critical-means-toolssensors)
-* [IT/security Watch](https://github.com/cyb3rxp/awesome-soc/blob/main/README.md#itsecurity-watch-recommended-sources)
+* [IT/security Watch](https://github.com/cyb3rxp/awesome-soc/blob/main/README.md#itsecurity-watch)
 * [SOAR](https://github.com/cyb3rxp/awesome-soc/blob/main/soar.md)
 * [Detection engineering](https://github.com/cyb3rxp/awesome-soc/blob/main/detection_engineering.md)
 * [Threat intelligence](https://github.com/cyb3rxp/awesome-soc/blob/main/threat_intelligence.md)
@@ -28,7 +28,7 @@ NB: Generally speaking, SOC here refers to detection activity, and CERT/CSIRT to
   * MITRE, [11 strategies for a world-class SOC](https://www.mitre.org/publications/technical-papers/11-strategies-world-class-cybersecurity-operations-center) (or use [local file](https://github.com/cyb3rxp/awesome-soc/blob/main/11-strategies-of-a-world-class-cybersecurity-operations-center.pdf)): part 0 (Fundamentals).
   * FIRST, [Building a SOC](https://www.first.org/resources/guides/Factsheet_Building_a_SOC_start_small.pdf)
   * NCSC, [Building a SOC](https://www.ncsc.gov.uk/collection/building-a-security-operations-centre)
-  * Gartner, [SOC model guide](https://www.gartner.com/doc/reprints?id=1-2FWTKHQ8&ct=231213&st=sb&mkt_tok=MDAzLVlSVS0zMTQAAAGUXOi9oTLjhQW0-t-jtiz4cThV6UsESsg-qUUWy_3_yjQ9UY0gFSR_n-VslHyg4f9ZE5q07y8naSI8aEyK__RPezZ2Ub_Xi1b-N2aFO7gpmXLi)
+  * Gartner, [SOC model guide](https://fr.scribd.com/document/732782046/Gartner-SOC-Model-Guide-2023)
   * Splunk, [State of Security 2023](https://www.splunk.com/en_us/pdfs/gated/ebooks/state-of-security-2023.pdf)
   * Microsoft, [Secure your business with 365](https://learn.microsoft.com/en-us/microsoft-365/business-premium/secure-your-business-data?view=o365-worldwide) 
 * SOC training/interview:
@@ -47,7 +47,7 @@ NB: Generally speaking, SOC here refers to detection activity, and CERT/CSIRT to
   * FIRST, [CSIRT Services Framework](https://www.first.org/standards/frameworks/csirts/csirt_services_framework_v2.1)
 * Security incident response management:
   * ENISA, [Good practice for incident management](https://www.enisa.europa.eu/publications/good-practice-guide-for-incident-management)
-  * EE-ISAC [Incident Response whitepaper](https://www.ee-isac.eu/comp/uploads/2020/12/EE-ISAC-Incident-Response-White-Paper-1.pdf)
+  * EE-ISAC [Incident Response whitepaper](https://www.ee-isac.eu/media/2023/05/EE-ISAC-Incident-Response-White-Paper.pdf)
   * LinkedIn Pulse, [Security incident management according to ISO 27005](https://www.linkedin.com/pulse/security-incident-management-according-iso-27035-dipen-das-)
   * Microsoft/EY/Edelman, [Incident response reference guide](https://www.linkedin.com/posts/the-cyber-security-hub_incident-response-reference-guide-activity-7033563558642642944-0zav?utm_source=share&utm_medium=member_desktop)
   * Microsoft, [IR lessons on cloud ID compromise](https://www.microsoft.com/en-us/security/blog/2023/12/05/microsoft-incident-response-lessons-on-preventing-cloud-identity-compromise/?msockid=07788c7fcb0c689a2a5d98f6ca0169fb)
@@ -56,7 +56,7 @@ NB: Generally speaking, SOC here refers to detection activity, and CERT/CSIRT to
   * [ForensicsArtefacts](https://github.com/ForensicArtifacts/artifacts)
 * Incident response playbooks:
   * Kaspersky, [Incident Response Playbook: Dark Web Breaches](https://dfi.kaspersky.com/blog/dark-web-threats-response-guideline#form)
-  * IncidentResponse.org, [IR playbooks](https://www.incidentresponse.org/playbooks/)
+  * CISA, [Incident Response playbooks](https://www.cisa.gov/sites/default/files/2024-08/Federal_Government_Cybersecurity_Incident_and_Vulnerability_Response_Playbooks_508C.pdf)
   * SANS, [IR Mitigations tasks](https://board.flexibleir.com/b/VtdssIfCJ6Z2LYLED/1)
 
 ## Globally (SOC and CERT/CSIRT)
@@ -88,14 +88,14 @@ NB: Generally speaking, SOC here refers to detection activity, and CERT/CSIRT to
   * MITRE, [Threat Matrix for AI-systems](https://github.com/mitre/advmlthreatmatrix/blob/master/pages/adversarial-ml-threat-matrix.md#adversarial-ml-threat-matrix)
 * SOAR solutions:
   * Swimlane, [Cyber Threat readiness report 2023](https://swimlane.com/wp-content/uploads/Cyber-Threat-Readiness-Report-2023.pdf);
-  * Gartner, [Market Guide for Security Orchestration, Automation and Response Solutions](https://www.gartner.com/doc/reprints?id=1-2ADE1K2G&ct=220621&st=sb)
+  * Gartner, [Market Guide for Security Orchestration, Automation and Response Solutions](https://fr.scribd.com/document/619736260/Gartner-Market-Guide-for-Security-Orchestration-Automation)
 * NIS2:
   * NIS2Directive: [NIS2 10 main requirements](https://nis2directive.eu/nis2-requirements/) 
   * LinkedIn: [How will NIS2 impact your organization?](https://www.linkedin.com/pulse/how-eu-directive-nis2-impact-your-organization-anders-fleinert-larsen%3FtrackingId=Vq3GCGlOTXe1u0dllhn9MA%253D%253D/?_l=fr_FR)
   * CyberArk: [NIS2, how to address the security control gaps](https://event.on24.com/eventRegistration/console/apollox/mainEvent?simulive=y&eventid=4110743&sessionid=1&username=&partnerref=&format=fhvideo1&mobile=&flashsupportedmobiledevice=&helpcenter=&key=588150776CAE70D7F02ECF2848FF11FA&newConsole=true&nxChe=true&newTabCon=true&consoleEarEventConsole=false&text_language_id=en&playerwidth=748&playerheight=526&eventuserid=600843623&contenttype=A&mediametricsessionid=517006274&mediametricid=5797475&usercd=600843623&mode=launch)
 * Management:
   * Gartner, [Cybersecurity business value benchmark](https://emtemp.gcom.cloud/ngw/globalassets/en/doc/documents/775537-gartner-cybersecurity-business-value-benchmark-1st-generation.pdf)
-  * Forrester, [Best practices for automating SecOps workflow](https://reprints2.forrester.com/#/assets/2/721/RES179705/report)
+  * CrowdStrike, [State of SIEM market 2025]](https://go.crowdstrike.com/rs/281-OBQ-266/images/Whitepaper2025StateofSIEMMarketCribl.pdf?version=0)
   * Microsoft, ["While the initial trigger event was a Distributed Denial-of-Service (DDoS) attack... initial investigations suggest that an error in the implementation of our defences amplified the impact of the attack rather than mitigating it"](https://www.bbc.com/news/articles/c903e793w74o)
 * SOP (Standard Operating Procedures):
   * [Antimalware check SOP](https://github.com/cyb3rxp/awesome-soc/blob/main/sop_malware_critical_controls.md)
@@ -156,7 +156,7 @@ too much data such that tools and analysts become overwhelmed.
 
 ## Critical tools for a SOC/CSIRT
 * **[SIEM](https://www.gartner.com/en/information-technology/glossary/security-information-and-event-management-siem)**:
-   * See [Gartner magic quadrant](https://www.devo.com/wp-content/uploads/2024/05/MQ-2024-Resource-tile.jpg) and [Gartner critical SIEM capabilities](https://www.gartner.com/doc/reprints?id=1-2HXU226Z&ct=240626&st=sb)
+   * See [Gartner magic quadrant](https://www.bitdefender.com/en-us/business/campaign/2025-gartner-magic-quadrant-for-epp-the-only-visionary) and [Gartner critical SIEM capabilities](https://www.gartner.com/doc/reprints?id=1-2HXU226Z&ct=240626&st=sb)
    * My recommendations: [Microsoft Azure Sentinel](https://azure.microsoft.com/en-us/products/microsoft-sentinel/#overview), [Sekoia.io XDR](https://www.sekoia.io/en/sekoia-io-xdr/), [Splunk](https://www.splunk.com), [Graylog](https://graylog.org/).
 * **[SIRP](https://d3security.com/blog/whats-the-difference-between-soar-and-sao/)**:
   * e.g.: [IBM Resilient](https://www.ibm.com/qradar/security-qradar-soar?utm_content=SRCWW&p1=Search&p4=43700068028974608&p5=e&gclid=Cj0KCQjw9ZGYBhCEARIsAEUXITW2yUqAfNqWNeYXyENeUAoqLxV543LT0n2oYhYxEQ47Yjm7NfYTFHAaAtwpEALw_wcB&gclsrc=aw.ds),  [TheHive](https://thehive-project.org/), [SwimLane](https://swimlane.com/), [PAN Cortex XSOAR](https://www.paloaltonetworks.com/cortex/cortex-xsoar)
@@ -212,6 +212,7 @@ too much data such that tools and analysts become overwhelmed.
        * for Windows:
           * simple but efficient ESET [Sysinspector](https://www.eset.com/int/support/sysinspector/);
           * [Velociraptor](https://docs.velociraptor.app/docs/);
+          * [Powershell Hunter](https://github.com/MHaggis/PowerShell-Hunter/tree/main)
           * [DFIR-ORC](https://github.com/dfir-orc);
           * [Sysmon](https://learn.microsoft.com/fr-fr/sysinternals/downloads/sysmon):
             * install it (if not done already, let it run for a few hours/days), with [Olaf Hartong's config](https://github.com/olafhartong/sysmon-modular/blob/master/sysmonconfig.xml);
@@ -233,7 +234,9 @@ too much data such that tools and analysts become overwhelmed.
   * My recommendations: [CIMSweep](https://github.com/mattifestation/CimSweep), [Velociraptor](https://docs.velociraptor.app/docs/deployment/), [CrowdStrike Falcon Toolkit](https://github.com/CrowdStrike/Falcon-Toolkit) but it relies on CrowdStrike EDR, [GRR](https://github.com/google/grr) but it needs an agent to be installed.
 * **On-demand sandbox**:
   * My recommendations for online ones: [Joe's sandbox](https://www.joesandbox.com/#windows), [Hybrid Analysis](https://www.hybrid-analysis.com/), etc;
-  * My recommendation for local one: Windows 10 native Sandbox, with [automation](https://megamorf.gitlab.io/2020/07/19/automating-the-windows-sandbox/).
+  * My recommendation for local one:
+     * Windows 10 native Sandbox, with [automation](https://megamorf.gitlab.io/2020/07/19/automating-the-windows-sandbox/).
+     * Linux/Docker : [CISA Thorium](https://github.com/cisagov/thorium?tab=readme-ov-file)
 * **Forensics and reverse-engineering tools suite**:
   * My recommendations: [SIFT Workstation](https://www.sans.org/tools/sift-workstation/), or [Tsurugi](https://tsurugi-linux.org/);
   * My recommendation for reverse engineering and malware analysis, under Windows: [FireEye Flare-VM](https://github.com/mandiant/flare-vm);
@@ -283,23 +286,22 @@ defenses, monitoring, and other actions.
 
 
 ## Recommended sources
+* RSS reader/portal:
+  * e.g.: [Netvibes](https://www.netvibes.com/phvialle?page=phvialle#Security)  
+* Known exploited vulnerabilities +0days: 
+  * [CISA catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
+  * [Top 0days "in the wild"](https://docs.google.com/spreadsheets/d/1lkNJ0uQwbeC1ZTRrxdtuPLCIl7mlUreoKfSIgajnSyY/edit#gid=1746868651)
+* LinkedIn / Twitter:
+  * e.g.: [LinkedIn Information Security Community group](https://www.linkedin.com/groups/38412/) 
+* Government CERT, industry sector related CERT...
+  * e.g.: [CERT-FR](https://www.cert.ssi.gouv.fr/avis/), [CERT-US](https://www.cisa.gov/uscert/ncas/alerts)
 * SIEM rules publications:
   * [Sigma HQ (detection rules)](https://github.com/SigmaHQ/sigma/tree/master/rules) 
   * [Splunk Security content (free detection rules for Splunk)](https://research.splunk.com/) 
   * [SOC Prime](https://tdm.socprime.com/)
   * [Michel De Crevoisier's Git](https://github.com/mdecrevoisier/SIGMA-detection-rules)
-* Known exploited vulnerabilities +0days: 
-  * [CISA catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
-  * [CVETrends](https://cvetrends.com/)
-  * [Top 0days "in the wild"](https://docs.google.com/spreadsheets/d/1lkNJ0uQwbeC1ZTRrxdtuPLCIl7mlUreoKfSIgajnSyY/edit#gid=1746868651)
-* LinkedIn / Twitter:
-  * e.g.: [LinkedIn Information Security Community group](https://www.linkedin.com/groups/38412/) 
-* RSS reader/portal:
-  * e.g.: [Netvibes](https://www.netvibes.com/phvialle?page=phvialle#Security)  
-* Government CERT, industry sector related CERT...
-  * e.g.: [CERT-FR](https://www.cert.ssi.gouv.fr/avis/), [CERT-US](https://www.cisa.gov/uscert/ncas/alerts)
 * Newsletters:
-  * e.g.: [TheRecord.media](https://therecord.media/subscribe), [Intrinsec Threat Landscape](https://intrinsec.us13.list-manage.com/subscribe?u=403249ad144b732517b9fca94&id=041976f275)
+  * e.g.: [TheRecord.media](https://therecord.media/subscribe), [Intrinsec Threat Landscape](https://intrinsec.us13.list-manage.com/subscribe?u=403249ad144b732517b9fca94&id=041976f275) & [LinkedIn posts](https://www.linkedin.com/company/intrinsec/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BAyS%2B%2F6ysQ5G%2BBlZQjTWrKg%3D%3D)
 * Podcasts:
   * WithSecure [Xposed](https://www.withsecure.com/en/expertise/podcasts)
 * Other interesting websites:
@@ -493,7 +495,7 @@ SOC’s assets should be part of a separate [restricted AD forest](https://learn
 * [PTES](http://www.pentest-standard.org/index.php/Main_Page)
 * OWASP, [WSTG](https://owasp.org/www-project-web-security-testing-guide/)
 * BitDefender, [Analyzing MITRE ATT&CK evaluations 2023](https://explore.bitdefender.com/epp-nurture-2023_2/blog-mitre-attck-evaluations-2023?cid=emm%7Cb%7Chubspot%7Cnrt-epp-2023&utm_campaign=nurture-epp-2023&utm_medium=email&_hsmi=280552612&utm_content=280552612&utm_source=hs_automation)
-* Microsoft, [Licensing maps, eg. for Defender](https://m365maps.com/)
+* Microsoft, [Licensing maps, eg. for Defender](https://m365maps.com/) & [Modern work plan comparison SMB](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/modern-work-plan-comparison-smb5.pdf)
 
 
 ## SOC sensors, nice to have
@@ -517,6 +519,7 @@ SOC’s assets should be part of a separate [restricted AD forest](https://learn
   * My recommendation: [Crowdsec](https://www.crowdsec.net/product/crowdsec-security-engine)
 * NDR:
   * My recommendation: [Gatewatcher](https://www.gatewatcher.com/en/our-solutions/trackwatch/)
+  * See [Gartner MAgic Quadrant for NDR](https://www.gartner.com/doc/reprints?id=1-2L4DC15S&ct=250602&st=sb&utm_campaign=2023_INTL_NDR&utm_medium=email&utm_content=364396704&utm_source=hs_automation&_hsmi=364396704&hsCtaAttrib=190924237752)
 * DLP:
   * See [Gartner reviews and ratings](https://www.gartner.com/reviews/market/data-loss-prevention)
 * OT (industrial) NIDS:

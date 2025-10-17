@@ -19,10 +19,11 @@ This page deals with SOC detection engineering and management (detection use cas
 * MITRE, [top TTP for ransomwares](https://top-attack-techniques.mitre-engenuity.org/)
 * Splunk, [Top 50 cybersecurity threats](https://www.splunk.com/en_us/pdfs/gated/ebooks/top-50-cybersecurity-threats.pdf)
 * Known exploited vulnerabilities: 
-  * [CISA catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
+  * [CISA KEV catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
 ## SIEM rules publications:
   * [Sigma HQ (detection rules)](https://github.com/SigmaHQ/sigma/tree/master/rules) 
-  * [Splunk Security content (free detection rules for Splunk)](https://research.splunk.com/) 
+  * [Splunk Detections (free detection rules for Splunk)](https://research.splunk.com/detections/)
+  * [Splunk Stories for Office 365](https://research.splunk.com/stories/office_365_collection_techniques/)
   * [Michel De Crevoisier's Git](https://github.com/mdecrevoisier/SIGMA-detection-rules)
   * [SOC Prime](https://socprime.com/)
 ## SIEM standards
@@ -31,6 +32,8 @@ This page deals with SOC detection engineering and management (detection use cas
 ## SecOps activities
 * Ch33r10, [Enterprise purple teaming](https://github.com/ch33r10/EnterprisePurpleTeaming)
 ## Detection engineering
+* [MITRE D3FEND](https://d3fend.mitre.org/)
+* [CVE2CAPEC](https://github.com/Galeax/CVE2CAPEC)
 * F. Roth, [Detection engineering cheat sheet](https://mobile.twitter.com/cyb3rops/status/1592879894396293121/photo/1)
 * Medium, ['About detection engineering'](https://cyb3rops.medium.com/about-detection-engineering-44d39e0755f0)
 * NCSC, [Detection Practices](https://www.ncsc.gov.uk/collection/building-a-security-operations-centre/detection/detection-practices)
@@ -40,21 +43,25 @@ This page deals with SOC detection engineering and management (detection use cas
 * ANSSI, [EBIOS RM methodology](https://www.ssi.gouv.fr/guide/ebios-risk-manager-the-method/)
 * David J. Bianco, [Pyramid of pain](https://detect-respond.blogspot.com/2013/03/the-pyramid-of-pain.html)
 * Tsale, [EDR telemetry](https://github.com/tsale/EDR-Telemetry)
+* MITRE ATT&CK [Evaluations: Enterprise, 2024](https://www.withsecure.com/en/expertise/campaigns/mitre-2024)
 * RULER project, [forensics tracks of common security tools](https://ruler-project.github.io/ruler-project/)
 * Uncoder.io [UncoderIO Git](https://github.com/UncoderIO/Uncoder_IO)
-### Audit policy
+### Audit policy / forensics
 * OWASP, [logging cheat sheet](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
 * Microsoft, [Monitoring Active Directory for signs of compromise](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/security-best-practices/monitoring-active-directory-for-signs-of-compromise)
 * TheCloudTechnologist, [Microsoft 365 audit & logging](https://thecloudtechnologist.com/2021/10/15/everything-you-wanted-to-know-about-security-and-audit-logging-in-office-365/)
 * Michel de Crevoisier, [Microsoft Eventlog mindmap](https://github.com/mdecrevoisier/Microsoft-eventlog-mindmap)
 * Michel de Crevoisier, [Mapping MITRE ATT&CK with Window Event Log IDs](https://www.socinvestigation.com/mapping-mitre-attck-with-window-event-log-ids/)
+* Mhtcht, [Windows DFIR artifacts collection mindmap](https://github.com/mthcht/awesome-lists/blob/a0d64850bb79902f3e3518489288eb0b62c5d9d8/Lists/CheatSheets/mthcht/windows_dfir_artifacts_collection_mindmap_high_resolution.jpg)
 * Picus Security [Active Directory Security Guide](https://www.picussecurity.com/hubfs/Threat%20Readiness%20-%20Active%20Directory%20Ebook%20-%20Q123/Picus-The-Complete-Active-Directory-Security-Handbook.pdf)
+* [EventLog Compendium](https://eventlog-compendium.streamlit.app/)
 ## IT best practices for SOC engineering
 * Atlassian, [CI/CD/CD](https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment)
 ## Offensive activity watch
 * Medium, [Named pipe impersonation abuse](https://bherunda.medium.com/hunting-named-pipe-token-impersonation-abuse-573dcca36ae0)
 * Synaktiv, [Azure Entra ID pentesting mindmap](https://github.com/synacktiv/Mindmaps?s=03)
 * Rootkit POC in Rust, [MemN0ps](https://github.com/memN0ps/rootkit-rs/?tab=readme-ov-file)
+* [MITRE ATLAS](https://atlas.mitre.org/)
 ## Operating systems knowledge
 * List of the expected legit system services to be found on a Windows 10/11 box, [my Git page](https://github.com/cyb3rxp/awesome-soc/blob/main/legit_Windows_services.md)
 
@@ -138,6 +145,9 @@ As per [Wikipedia](https://en.wikipedia.org/wiki/PDCA#/media/File:PDCA-Multi-Loo
 * Assess the relevance and freshness of exclusion lists, aka blacklists (that are supposed to be synced with Git)
 * Assess the relevance and freshness of IOC lists (that are supposed to be synced with the TIP).
 * Assess the relevance and freshness of assets lists (that are supposed to be synced with Git), for instance groups, VIP/VOP, particular endpoints, etc.
+
+### AI/LLM embedded in cybersecurity solutions assessment
+* [CyberSecEval 4 is an extensive benchmark suite designed to assess the cybersecurity vulnerabilities and defensive capabilities of Large Language Models (LLMs)](https://github.com/meta-llama/PurpleLlama/tree/main/CybersecurityBenchmarks)
 
 ## Act
 * Fix everything that was previously identified as not working, missing, or not matching your needs.
