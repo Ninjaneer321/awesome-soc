@@ -23,10 +23,11 @@ This page deals with SOC and CERT management
 * FIRST, [CERT-in-a-box](https://www.first.org/resources/guides/cert-in-a-box.zip) 
 * FIRST, [CSIRT Services Framework](https://www.first.org/standards/frameworks/csirts/csirt_services_framework_v2.1)
 * ENISA, [Good practice for incident management](https://www.enisa.europa.eu/publications/good-practice-guide-for-incident-management)
-* CIS, [8 critical security controls](https://www.cisecurity.org/controls/cis-controls-list)
+* CIS, [18 critical security controls](https://www.cisecurity.org/controls/cis-controls-list)
 * CMM, [SOC-CMM](https://www.soc-cmm.com/downloads/soc-cmm%20whitepaper.pdf)
 * Linkedin Pulse, [Evolution Security Operations Center](https://www.linkedin.com/pulse/evolution-security-operations-center-lakshminarayanan-kaliyaperumal/)
 * Gartner, [Cybersecurity business value benchmark](https://emtemp.gcom.cloud/ngw/globalassets/en/doc/documents/775537-gartner-cybersecurity-business-value-benchmark-1st-generation.pdf)
+* Gartner, [Priorities navigator for CISOs](https://view.ceros.com/gartner/sec31-priorities-navigator/p/1)
 * LogRythm, [7 metrics to measure the effectiveness of your SOC](https://www.compuquip.com/hubfs/Vendors/LogRhythm/LogRhythm-7-Metrics-to-Measure-the-Effectiveness-of-Your-SOC-Ebook.pdf?hsCtaTracking=6f44e275-b498-4bee-af8e-c5c5b7aca241%7Cec4bcb3b-9186-4252-a4df-2e9efd8c4d47)
 * Google, [Modernize your SOC for the future](https://www.brighttalk.com/webcast/18282/565440?utm_source=brighttalk-recommend&utm_campaign=network_weekly_email&utm_medium=email&utm_content=company&utm_term=132023)
 * Signalblur, [Getting started with ATT&CK heatmaps](https://www.signalblur.io/getting-started-with-mitres-att-ck-navigator/)
@@ -156,8 +157,12 @@ Source: [LinkedIn article](https://www.linkedin.com/posts/teodorchabin_soc-cyber
 # Global self-assessment
 
 ## SOC Self-assessment
-*	Read the [SOC Cyber maturity model](https://www.soc-cmm.com/introduction/) from CMM
-*	Run the [SOC-CMM self-assessment tool](https://www.soc-cmm.com/downloads/latest/) 
+*	SOC Basics:
+ 	*	Run the [Google SecOps assessment](https://securityassessments.withgoogle.com/secops/)
+*	Thorough SOC assessment:
+ 	*	Read the [SOC Cyber maturity model](https://www.soc-cmm.com/introduction/) from CMM
+ 	*	Run the [SOC-CMM self-assessment tool](https://www.soc-cmm.com/downloads/latest/)
+
 
 ## CERT/CSIRT self-assessment
 * Read the [OpenCSIRT cybersecurity maturity framework](https://www.enisa.europa.eu/topics/csirts-in-europe/csirt-capabilities/csirt-maturity/) from ENISA 

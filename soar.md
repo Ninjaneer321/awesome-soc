@@ -19,6 +19,8 @@ This page deals with Security Orchestration Automation and Response.
 * RecordedFuture [The Automation Advantage: Transforming Cybersecurity and Efficiency in Organisations](https://go.recordedfuture.com/automation-advantage-webinar?utm_medium=email&_hsenc=p2ANqtz-_zNWKiR0eBOCpx_R5cUwRu3iPfgPI8BeMLutfF1ywpL5i6LleQRxBvCUZ-dbaseqlfOWtLVikC5-lmwPYyhQCltn4Clg&_hsmi=316108876&utm_content=316108876&utm_source=hs_email)
 * PaloAlto, [Top security orchestration use cases](https://www.paloaltonetworks.com/engage/cortex-xsoar/top-security-orchestration-use-cases?utm_source=marketo&utm_medium=email&utm_campaign=Global-NU-EN-21-04-14-XX-P3-Cortex-XSOAR.EN-NU05-Cortex_XSOAR-MOFU&utm_network=pf&mkt_tok=NTMxLU9DUy0wMTgAAAGRtyevdpJBsF0cPQpwRMziLi8AsU4MneA1CMmGAGggPsBuYenJW9khG5e7Wqa78zC0GcLaP0a2R-e6bJpJ0BQAwEKLDrSpqe6npkmcM3DpNXSeqbeAJ9E&_pfses=Rx9LBfVH47t8TMQ542Kr7pCt#page=3)
 * PTP, [SOAR-based security monitoring](https://ptp.cloud/soar-based-security-monitoring/)
+* CyberSecurityForMe, [MS Copilot Security vulnerabilities and countermeasures](https://cybersecurityforme.com/copilot-security-vulnerabilities-and-safety-measures-for-enterprises/)
+* Microsoft [Copilot Security use cases](https://learn.microsoft.com/en-us/copilot/security/use-case-role-overview)
 
 # What is SOAR?
 
@@ -90,6 +92,9 @@ Try to implement at least the following automations, leveraging the SOA/SIRP/TIP
 * Automatically retrieve the history of SIRP tickets for an user and/or endpoint, that is associated to a new SIRP ticket.
 * Automatically query AD or the assets management solution, for artefact enrichment (user, endpoint, IP, application, etc.).
 
+### ML / LLM
+
+NB : The above use cases can be supported by machine learning / LLM capabilities, aiming at helping the analyst by suggesting him/her next steps of the detection phase.
 
 ## My recommendations for detection (artefacts investigation):
 
@@ -97,6 +102,10 @@ Try to implement at least the following automations, leveraging the SOA/SIRP/TIP
    * My recommendation: use a script to query OpenCTI for with a CSV file, and make sure the output will confirm known malicious IP addresses (+ OpenCTI link to the IOC).
 * Extract a list of fresh IOCs from the TIP, and embed them in an IOC scanner:
    * My recommendation: use a script extract IP/URL/domains over the last month, MD5 over the last year, and embed them in [Thor Lite](https://www.nextron-systems.com/thor-lite/) or [DFIR-ORC](https://github.com/dfir-orc).
+
+### ML / LLM
+
+NB : The above use cases can be supported by machine learning / LLM capabilities, aiming at helping the analyst by suggesting him/her next steps of the detection phase.
 
 
 ## My recommendations for response (incident response, containment/eradication steps):
@@ -119,6 +128,11 @@ Try to implement at least the following automations, leveraging the SOA/SIRP/TIP
   * Report false positive on VT (ML scanner) to CrowdStrike: VTscanner@crowdstrike.com.
 * Report a malicious URL (for instance, phishing) to a security vendor for takedown steps
   * My recommendation: [Netcraft](https://www.netcraft.com/cybercrime/) [via API](https://report.netcraft.com/api/v3), or [PhishReport](https://phish.report/docs).
+ 
+### ML / LLM
+
+NB : The above use cases can be supported by machine learning / LLM capabilities, aiming at helping the analyst by suggesting him/her next steps of the response phase.
+
  
  ## Automation example around identity-based detections
 

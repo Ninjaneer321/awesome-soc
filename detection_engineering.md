@@ -17,10 +17,12 @@ This page deals with SOC detection engineering and management (detection use cas
 
 ## Threat statistics/trends 
 * MITRE, [top TTP for ransomwares](https://top-attack-techniques.mitre-engenuity.org/)
+* MITRE, [Top 25 CWE for 2025](https://www.securityweek.com/mitre-releases-2025-list-of-top-25-most-dangerous-software-vulnerabilities/)
 * Splunk, [Top 50 cybersecurity threats](https://www.splunk.com/en_us/pdfs/gated/ebooks/top-50-cybersecurity-threats.pdf)
 * Known exploited vulnerabilities: 
   * [CISA KEV catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
-## SIEM rules publications:
+* CyberSecurityForMe, [Microsoft Copilot Security vulnerabilities and countermeasures](https://cybersecurityforme.com/copilot-security-vulnerabilities-and-safety-measures-for-enterprises/)
+## SIEM rules publications
   * [Sigma HQ (detection rules)](https://github.com/SigmaHQ/sigma/tree/master/rules) 
   * [Splunk Detections (free detection rules for Splunk)](https://research.splunk.com/detections/)
   * [Splunk Stories for Office 365](https://research.splunk.com/stories/office_365_collection_techniques/)
@@ -61,7 +63,12 @@ This page deals with SOC detection engineering and management (detection use cas
 * Medium, [Named pipe impersonation abuse](https://bherunda.medium.com/hunting-named-pipe-token-impersonation-abuse-573dcca36ae0)
 * Synaktiv, [Azure Entra ID pentesting mindmap](https://github.com/synacktiv/Mindmaps?s=03)
 * Rootkit POC in Rust, [MemN0ps](https://github.com/memN0ps/rootkit-rs/?tab=readme-ov-file)
+* A Poc, [Red Team tools](https://github.com/A-poc/RedTeam-Tools)
+* Technics [Unprotect.it](https://unprotect.it/techniques/)
+* VVSwift, [EDR killers list](https://github.com/vvswift/Bypass-Protection0x00)
+* Mandiant, [Net-NTLM v1 rainbow tables](https://cloud.google.com/blog/topics/threat-intelligence/net-ntlmv1-deprecation-rainbow-tables?hl=en)
 * [MITRE ATLAS](https://atlas.mitre.org/)
+* DarkOperator, [Mimikatz missing manual](https://github.com/darkoperator/mimikatz-missing-manual)
 ## Operating systems knowledge
 * List of the expected legit system services to be found on a Windows 10/11 box, [my Git page](https://github.com/cyb3rxp/awesome-soc/blob/main/legit_Windows_services.md)
 
@@ -292,16 +299,21 @@ On top of community SIEM rules, I wanted to highlight the following ones, that I
 * Correlation of firewall logs (outgoing traffic) and a list of IP addresses that are sources of detected attacks by WAF and NIDS;
    * NB: this is most likely a hint that a vulnerability has successfully been exploited and there is a callback to an attacker's machine.
 
-### Impossible scenarios:
+### Impossible travel scenarios:
 * Same user authenticating within X min of timeframe, on two different endpoints (workstations/mobiles, not being located in the same place);
    * for instance, X < 2min.
 * Same user (except admins, to begin with) authenticating on more than X endpoints (workstations/mobiles), per timeframe (eg.: 10 min);
-   * for instance, X > 2.   
+   * for instance, X > 2.
+* You may want to leverage "risky users" detections in Azure Entra ID.   
  
 ### Successful bruteforce [MITRE T1110]:
 * Same user having X wrong passwords followed by successful authentication;
   * for instance, X > 100
   * See [this Splunk Webinar](https://on24static.akamaized.net/event/39/91/78/5/rt/1/documents/resourceList1669214675158/splunkwebinarslidesdetectiondeepdive1669214674061.pdf), page 38.
+
+### Password (or session cookie) compromised  [MITRE T1078]
+* X Failed MFA attempts after successfull authentication;
+  * for instance, X > 2.
 
 ### Lateral movement [MITRE T1021.001]:
 * Multiple RDP servers to which an user connects over RDP for the first time;
@@ -319,16 +331,29 @@ On top of community SIEM rules, I wanted to highlight the following ones, that I
   * NB: you may want to query all of the query results onto your TIP, leveraging automation capabilities (SOA). Thus, you will prioritize the handling of those network traffic logs.
 
 ### Potential information leak:
-* Detect abnormal traffic peaks, within the outgoing traffic logs (FW, proxies);
+* Detect abnormal traffic peaks, within the outgoing traffic logs (FW, proxies):
   * See [this Splunk presentation](https://conf.splunk.com/files/2022/slides/SEC1428B.pdf)
+* Detect sensitive (PII, passwords, etc.) shared with anybody on cloud services:
+  * With [Cyera DSPM](https://www.cyera.com/platform/dspm) on Google workspace or Microsoft 365 :
+    * leverage the generated issues named "Publicly shared sensitive Google Drive files" or "Publicly shared sensitive Microsoft 365 files":
+      * confirm, based on filename/filepath, that the detection seems to be consistent with file properties (eg. filename being "health_data.gdoc"), to qualify the alert as an incident;
+      * if not possible to qualify the alert based on filename/filepath, then that will be up to relevant business/production managers to confirm the detection.
+    * leverage the generated issues named "Credentials in plain text":
+      * confirm, based on filename/filepath, that the detection seems to be consistent with file properties (eg. filename being "passwords.gsheet"),, to qualify the alert as an incident;
+      * if not possible to qualify the alert based on filename/filepath, then that will be up to relevant business/production managers to confirm the detection.
 
-### Obfuscated script [T1027, T1059]:
+
+### Obfuscated script [MITRE T1027, T1059]:
 * Typically obfuscated PowerShell with base64;
   * See [the Splunk's Git](https://github.com/splunk/security_content/blob/develop/detections/endpoint/powershell_fileless_script_contains_base64_encoded_content.yml)
   * If you wanna go further, see [this Splunk article](https://www.splunk.com/en_us/blog/security/hunting-for-malicious-powershell-using-script-block-logging.html)
 
 
 ## Advanced detection logics
+
+### Athentications attempts from known threat actor  [MITRE TA0001]
+* Detect VPN / Entra ID, etc. authentication attempts from IP addresses that are known to be malicious and associated to a defined threat actor;
+  * Correlate authentication logs with curated and up-to-date threat intel (IOC).
 
 ### Named pipe abuse
 * Detect anonymous named pipe
