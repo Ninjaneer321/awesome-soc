@@ -11,10 +11,11 @@ This page deals with Security Orchestration Automation and Response.
 # Must read/watch
 
 * PaloAlto, [Security orchestration for dummies](https://www.paloaltonetworks.com/content/dam/pan/en_US/assets/pdf/cortex-xsoar/Security-Orchestration-For-Dummies-Demisto-Special-Edition.pdf);
+* Orange CyberDefense, [SOAR conclusions for 2020](https://www.orangecyberdefense.com/global/blog/managed-detection-response/soar-conclusions-for-2020)
 * ThreatConnect, [SIRP / SOA / TIP benefits](https://threatconnect.com/blog/realizing-the-benefits-of-security-orchestration-automation-and-response-soar/);
 * Swimlane, [Cyber Threat readiness report 2023](https://swimlane.com/wp-content/uploads/Cyber-Threat-Readiness-Report-2023.pdf);
 * Swimlane, [Automating SIEM alert triage](https://swimlane.com/resources/videos/automating-siem-alert-triage-demo/?utm_source=pardot&utm_medium=email_newsletter);
-* Gartner, [Market Guide for Security Orchestration, Automation and Response Solutions](https://www.gartner.com/doc/reprints?id=1-2ADE1K2G&ct=220621&st=sb);
+* Gartner, [Market Guide for Security Orchestration, Automation and Response Solutions](https://fr.scribd.com/document/619736260/Gartner-Market-Guide-for-Security-Orchestration-Automation);
 * Microsoft, [Microsoft Defender XDR , Security Copilot and Sentinel integrated into 1 portal](https://techcommunity.microsoft.com/t5/microsoft-mechanics-blog/microsoft-defender-xdr-security-copilot-amp-microsoft-sentinel/ba-p/3989312);
 * RecordedFuture [The Automation Advantage: Transforming Cybersecurity and Efficiency in Organisations](https://go.recordedfuture.com/automation-advantage-webinar?utm_medium=email&_hsenc=p2ANqtz-_zNWKiR0eBOCpx_R5cUwRu3iPfgPI8BeMLutfF1ywpL5i6LleQRxBvCUZ-dbaseqlfOWtLVikC5-lmwPYyhQCltn4Clg&_hsmi=316108876&utm_content=316108876&utm_source=hs_email)
 * PaloAlto, [Top security orchestration use cases](https://www.paloaltonetworks.com/engage/cortex-xsoar/top-security-orchestration-use-cases?utm_source=marketo&utm_medium=email&utm_campaign=Global-NU-EN-21-04-14-XX-P3-Cortex-XSOAR.EN-NU05-Cortex_XSOAR-MOFU&utm_network=pf&mkt_tok=NTMxLU9DUy0wMTgAAAGRtyevdpJBsF0cPQpwRMziLi8AsU4MneA1CMmGAGggPsBuYenJW9khG5e7Wqa78zC0GcLaP0a2R-e6bJpJ0BQAwEKLDrSpqe6npkmcM3DpNXSeqbeAJ9E&_pfses=Rx9LBfVH47t8TMQ542Kr7pCt#page=3)
@@ -84,7 +85,7 @@ Here is [an example](https://ptp.cloud/soar-based-security-monitoring/) of a SOC
 ## My recommendations for detection (alerts handling):
 
 Try to implement at least the following automations, leveraging the SOA/SIRP/TIP/SIEM capabilities:
-* Make sure all the context from any alert is being automatically transfered to the SIRP ticket, with a link to the SIEM alert(s) in case of.
+* Make sure all the context from any alert is being automatically transferred to the SIRP ticket, with a link to the SIEM alert(s) in case of.
   * Leverage API (through SOA) if needed to retrieve the missing context info, when using built-in integrations.
 * Automatically query the TIP for any artefacts or even IOC that is associated to a SIRP ticket.
 * Automatically retrieve the history of antimalware detections for an user and/or endpoint, that is associated to a SIRP ticket.

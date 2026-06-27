@@ -12,7 +12,9 @@
 ## Books/articles/recordings
 
 * Thomas Roccia, [Visual Threat Intelligence](https://www.amazon.fr/Visual-Threat-Intelligence-Illustrated-Researchers/dp/B0C7JCF8XD);
-* MITRE, [top TTP for ransomwares](https://top-attack-techniques.mitre-engenuity.org/);
+* SGDSN (France), [OpenCTI Doctrine](https://www.sgdsn.gouv.fr/files/2025-04/20250415_NP_SGDSN_VIGINUM_DoctrineOpenCTI_versionENG.pdf)
+* EE-ISAC, [Threat Intel Management](https://www.ee-isac.eu/media/2023/05/Threat-Management-Master-v1.2_ENISA_Proofreading_SA.pdf)
+* MITRE, [top TTP for ransomwares](https://ctid.mitre.org/projects/top-attack-techniques/);
 * David J. Bianco, [Pyramid of pain](https://detect-respond.blogspot.com/2013/03/the-pyramid-of-pain.html);
 * OASIS Open, [STIX](https://oasis-open.github.io/cti-documentation/stix/intro.html);
 * FIRST, [TLP](https://www.first.org/tlp/) (intelligence sharing and confidentiality);
@@ -64,7 +66,7 @@ As per [Gartner](https://www.gartner.com/doc/reprints?id=1-2IJMCHZX&ct=240815&st
 
 # Threat intel life cycle
 
-Here is [an overview](https://erdalozkaya.com/2021/06/06/cyber-threat-intelligence/) of a generic cyber threat intel lifecycle, with the following key steps:
+Here is [an overview](https://erdalozkaya.com/cyber-threat-intelligence/) of a generic cyber threat intel lifecycle, with the following key steps:
 * Plannning & Direction,
 * Collection,
 * Processing & Exploitation;
@@ -90,13 +92,16 @@ As per [Forrester article](https://www.forrester.com/blogs/15-11-07-starting_soo
 
 ## Architecture example
 
-Here is [an example](https://securityonline.info/s1em-siem-with-sirp-and-threat-intel/) of an architecture with:
- * SIEM: Elastic;
- * TIP: MISP / OpenCTI;
- * SIRP: TheHive;
- * Threat intel orchestrator: Cortex.
- 
-![image](https://user-images.githubusercontent.com/16035152/204066143-6c0a9cf0-67ab-44c7-b67e-af5df5a07219.png)
+### All-in-one proprietary (and sovereign :) )
+
+Here is [another example](https://www.infinigate.com/fr/vendors/sekoia/) of an architecture with:
+ * SIEM: Sekoia XDR;
+ * TIP: Sekoia CTI;
+    * (plus OpenCTI and others if needed, _via_ API integration);
+ * SIRP: Sekoia XDR;
+ * SOA: Sekoia SOAR.
+
+![image](https://www.infinigate.com/fr/wp-content/uploads/sites/26/2025/05/sekoia-harfanglab-768x357.png)
 
 
 # Sources
@@ -107,7 +112,6 @@ Here is [an example](https://securityonline.info/s1em-siem-with-sirp-and-threat-
      * [Mandiant](https://www.mandiant.com/advantage/threat-intelligence/subscribe); 
      * [RecordedFuture](https://www.recordedfuture.com/platform/threat-intelligence); 
      * [Netcraft](https://www.netcraft.com/cybercrime/malicious-site-feeds/); 
-     * [Gatewatcher](https://www.gatewatcher.com/en/our-solutions/lastinfosec/);
      * [CrowdSec](https://www.crowdsec.net/pricing);
      * [HaveIBeenPwned](https://haveibeenpwned.com/API/Key)
    * My recommendations for community ones: 
@@ -130,7 +134,6 @@ Here is [an example](https://securityonline.info/s1em-siem-with-sirp-and-threat-
      * Orange CyberDefense, [Log4Shell IOC](https://github.com/Orange-Cyberdefense/log4shell_iocs);
      * Orange CyberDefense, [RU/UKR IOC](https://github.com/Orange-Cyberdefense/russia-ukraine_IOCs);
      * [RedFlag Domains](https://red.flag.domains/);
-     * Jeroen Steeman, [IPBlock lists](https://jeroen.steeman.org/IPBlock);
      * [si3t.ch](http://si3t.ch/evils/);
      * [Execute Malware](https://github.com/executemalware/Malware-IOCs/tree/main);
      * [FireHOL project: GreenSwow IP set](https://github.com/firehol/blocklist-ipsets/blob/master/greensnow.ipset);
@@ -141,16 +144,15 @@ Here is [an example](https://securityonline.info/s1em-siem-with-sirp-and-threat-
      * [Awesome Cobalt Strike](https://github.com/MichaelKoczwara/Awesome-CobaltStrike-Defence);
      * [AVAST](https://github.com/avast/ioc?tab=readme-ov-file);
      * [ThreatFox](https://threatfox.abuse.ch/);
-     * MontySecurity, [C2-Tracker](https://github.com/montysecurity/C2-Tracker/tree/main/data);
      * CrowdSec, [Free Paris2024 Olympic Games blocklist](https://app.crowdsec.net/blocklists/665d96cf0a60f8f3808a5d5c);
      * Mhtcht, [Security lists for SOC/DFIR detections](https://github.com/mthcht/awesome-lists);
      * Sekoia, [Happy YARA Christmas](https://github.com/SEKOIA-IO/Community/tree/main/yara_rules);
-     * [Maltiverse](https://whatis.maltiverse.com/feeds/)
+     * [Maltiverse](https://lumu.io/maltiverse/)
      * [StalkPhish](https://www.stalkphish.io/)
      * CIRCL [GCVE Vulnerability Lookup](https://vulnerability.circl.lu/)
+     * CyStack, [Stealer Fingerprints](https://github.com/cystack/stealer-fingerprints) (infostealer log fingerprints maintained from CyStack's intel pipeline);
   * To go further, some lists of feeds that could be of interest:
     * [Covert.io list](http://www.covert.io/threat-intelligence/);
-    * [Intel471](https://intel471.com/modules);
     * [Bert JanP](https://github.com/Bert-JanP/Open-Source-Threat-Intel-Feeds/tree/main);
   * And a reference framework to analyze data information leaks: [AIL Framework](https://github.com/CIRCL/AIL-framework).
 
@@ -164,33 +166,38 @@ Here is [an example](https://securityonline.info/s1em-siem-with-sirp-and-threat-
      * [URLHaus](https://urlhaus.abuse.ch/api/);
      * [OTX](https://otx.alienvault.com/api);
 
+
 * Well-known OSINT portals/websites:
-  * CyberChef >> https://cyberchef.io/
+  * [CyberChef](https://cyberchef.io/)
   * URL/IP multi-search portal:
-     * CyberGordon >> https://cybergordon.com/
-  * URL analysis >> https://urlscan.io/
+    * [CyberGordon](https://cybergordon.com/)
+  * [URL analysis](https://urlscan.io/)
   * Data breaches search portals:
-     * https://haveibeenpwned.com/
-     * https://www.pcloud.com/fr/pass/free-personal-data-breach-checker.html
-  * Cisco Reputation Check >> https://www.talosintelligence.com/
-  * IBM Reputation Check >> https://exchange.xforce.ibmcloud.com/
-  * IP Reputation Check >>https://www.abuseipdb.com/
-  * Domain/IP investigation >> https://cipher387.github.io/domain_investigation_toolbox/ip.html
-  * Malicious IPs and domains >> https://check-the-sum.fr
-  * Domain diagnostic & lookup tools >> https://mxtoolbox.com/
-  * DNS related tools >> https://viewdns.info/
-  * Search Engine for IoTs >> https://www.shodan.io/
-  * OSINT Framework >> https://lnkd.in/gXaz_Wry
-  * Malfrat's OSINT >> https://map.malfrats.industries/
-  * Find Emails >> https://hunter.io/
-  * Internet Archieve >> https://archive.org/web/
-  * Reverse Image search >> https://tineye.com  
-  * Cyberspace Search >> https://www.zoomeye.org/
-  * Search Engine >> https://search.censys.io/
-  * Website Profiler Tool >> https://builtwith.com/
-  * Email Info >> https://epieos.com/
-  * Email & Phone Info >> https://www.predictasearch.com
-  * File Search engine >> https://filepursuit.com/
+    * [Have I Been Pwned](https://haveibeenpwned.com/)
+    * PCloud, [Free Personal Data Breach Checker](https://www.pcloud.com/fr/pass/free-personal-data-breach-checker.html)
+  * CVE research websites:
+    *  [CVE PoC Search](https://labs.jamessawyer.co.uk/cves/)
+    *  [CVE Details](https://www.cvedetails.com/)
+  * Cisco, [Reputation Chech](https://www.talosintelligence.com/)
+  * IBM, [Reputation Check](https://exchange.xforce.ibmcloud.com/)
+  * [IP Reputation Check](https://www.abuseipdb.com/)
+  * [Domain/IP investigation](https://cipher387.github.io/domain_investigation_toolbox/ip.html)
+  * [Malicious IPs and domains](https://check-the-sum.fr)
+  * [Domain diagnostic & lookup tools](https://mxtoolbox.com/)
+  * [DNS related tools](https://viewdns.info/)
+  * [Search Engine for IoTs](https://www.shodan.io/)
+  * [OSINT Framework](https://lnkd.in/gXaz_Wry)
+  * [Malfrat's OSINT](https://map.malfrats.industries/)
+  * [Find Emails](https://hunter.io/)
+  * [Email Info](https://epieos.com/)
+  * [Email & Phone Info](https://www.predictasearch.com)
+  * [Internet Archive](https://archive.org/web/)
+  * [Reverse Image search](https://tineye.com)  
+  * ZoomEye, [Cyberspace Search](https://www.zoomeye.org/)
+  * Censy, [Search Engine](https://search.censys.io/)
+  * [Website Profiler Tool](https://builtwith.com/)
+  * [File Search engine](https://filepursuit.com/)
+  * Hudson Rock, [Free Infostealer Intelligence Toolset](https://www.hudsonrock.com/threat-intelligence-cybercrime-tools)
   
 * TOR search:
   * [OnionSearch](https://github.com/megadose/OnionSearch)

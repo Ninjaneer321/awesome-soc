@@ -1,19 +1,18 @@
 # SOC/CSIRT management: 
 This page deals with SOC and CERT management
 
-# Table of Content
+# Table of Contents
 
-* [Must read](https://github.com/cyb3rxp/awesome-soc/blob/main/management.md#must-read)
-* [Challenges](https://github.com/cyb3rxp/awesome-soc/blob/main/management.md#challenges)
-* [SOC organization](https://github.com/cyb3rxp/awesome-soc/blob/main/management.md#soc-organization)
-* [CSIRT organization](https://github.com/cyb3rxp/awesome-soc/blob/main/management.md#csirt-organization)
-* [TTP knowledge base reference](https://github.com/cyb3rxp/awesome-soc/blob/main/management.md#ttp-attack-methods-knowledge-base-reference)
-* [Data quality and management](https://github.com/cyb3rxp/awesome-soc/blob/main/management.md#data-quality-and-management)
-* [Key documents for a SOC](https://github.com/cyb3rxp/awesome-soc/blob/main/management.md#key-documents-for-a-soc)
-* [Detection assessment](https://github.com/cyb3rxp/awesome-soc/blob/main/management.md#detection-quality-assessment)
-* [Global self assessment](https://github.com/cyb3rxp/awesome-soc/blob/main/management.md#global-self-assessment)
-* [Reporting](https://github.com/cyb3rxp/awesome-soc/blob/main/management.md#reporting)
-* [To go further](https://github.com/cyb3rxp/awesome-soc/blob/main/management.md#to-go-further)
+* [Must read](#must-read)
+* [Challenges](#challenges)
+* [SOC organization](#soc-organization)
+* [CSIRT organization](#csirt-organization)
+* [TTP knowledge base reference](#ttp-attack-methods-knowledge-base-reference)
+* [Data quality and management](#data-quality-and-management)
+* [Key documents for a SOC](#key-documents-for-a-soc)
+* [Detection assessment](#detection-quality-assessment)
+* [Global self assessment](#global-self-assessment)
+* [To go further](#to-go-further)
 
 # Must read
 
@@ -24,13 +23,13 @@ This page deals with SOC and CERT management
 * FIRST, [CSIRT Services Framework](https://www.first.org/standards/frameworks/csirts/csirt_services_framework_v2.1)
 * ENISA, [Good practice for incident management](https://www.enisa.europa.eu/publications/good-practice-guide-for-incident-management)
 * CIS, [18 critical security controls](https://www.cisecurity.org/controls/cis-controls-list)
-* CMM, [SOC-CMM](https://www.soc-cmm.com/downloads/soc-cmm%20whitepaper.pdf)
+* CMM, [SOC-CMM](https://www.soc-cmm.com/img/upload/files/32-soc-cmm-whitepaper.pdf)
 * Linkedin Pulse, [Evolution Security Operations Center](https://www.linkedin.com/pulse/evolution-security-operations-center-lakshminarayanan-kaliyaperumal/)
 * Gartner, [Cybersecurity business value benchmark](https://emtemp.gcom.cloud/ngw/globalassets/en/doc/documents/775537-gartner-cybersecurity-business-value-benchmark-1st-generation.pdf)
 * Gartner, [Priorities navigator for CISOs](https://view.ceros.com/gartner/sec31-priorities-navigator/p/1)
 * LogRythm, [7 metrics to measure the effectiveness of your SOC](https://www.compuquip.com/hubfs/Vendors/LogRhythm/LogRhythm-7-Metrics-to-Measure-the-Effectiveness-of-Your-SOC-Ebook.pdf?hsCtaTracking=6f44e275-b498-4bee-af8e-c5c5b7aca241%7Cec4bcb3b-9186-4252-a4df-2e9efd8c4d47)
 * Google, [Modernize your SOC for the future](https://www.brighttalk.com/webcast/18282/565440?utm_source=brighttalk-recommend&utm_campaign=network_weekly_email&utm_medium=email&utm_content=company&utm_term=132023)
-* Signalblur, [Getting started with ATT&CK heatmaps](https://www.signalblur.io/getting-started-with-mitres-att-ck-navigator/)
+* DogeSec, [Getting started with ATT&CK heatmaps](https://www.dogesec.com/blog/getting_started_attck_navigator/)
 * TheHackerNews, [NIST CSF v2](https://thehackernews.com/2024/09/nist-cybersecurity-framework-csf-and.html)
 * First, [ISO 27035 Practical value for CSIRT and SOCs ](https://www.first.org/resources/papers/conf2023/FIRSTCON23-TLPCLEAR-Benetis-ISO-27035-practical-value-for-CSIRTs-and-SOCs.pdf)
 * Infoblox, [NIS2 & NCSC CAF](https://insights.infoblox.com/solution-notes/infoblox-solution-note-nis2-and-the-caf-framework)
@@ -124,13 +123,15 @@ Source: [LinkedIn article](https://www.linkedin.com/posts/teodorchabin_soc-cyber
 
 
 # Detection quality assessment
- * **Run regular [purpleteaming sessions](https://about.gitlab.com/handbook/engineering/security/threat-management/red-team/purple-teaming/)** in time!!
-   * e.g.: [Intrinsec](https://www.intrinsec.com/purple-team/), [FireEye](https://www.fireeye.fr/content/dam/fireeye-www/regional/fr_FR/services/pdfs/ds-purple-team-assessment.pdf)
+ * **Run regular [Purple teaming](https://docs.vectr.io/user/important-concepts/) sessions** in time!!
+   * e.g.: [Intrinsec](https://www.intrinsec.com/purple-team/), [SpecterOps](https://specterops.io/news/specterops-introduces-purple-team-assessments-service-to-help-customers-understand-the-efficacy-of-their-detection-capabilities/)
    * To do it on your own, here are a few recommended frameworks/tools:
        * Frameworks:
-         * RedCanary [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)
+         * [TIBER EU](https://www.ecb.europa.eu/pub/pdf/other/ecb.tiber_eu_framework_2025~b32eff9a10.en.pdf?0309990e5e167a47ca4748370a949064)
          * [CTID](https://github.com/center-for-threat-informed-defense/adversary_emulation_library/tree/master)
        * Tools:
+         * RedCanary [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)
+         * Filigran [OpenAEV](https://github.com/OpenAEV-Platform/openaev)
          * [Ytisf's zoo](https://github.com/ytisf/theZoo)
          * Abuse.ch [Malware Bazaar](https://bazaar.abuse.ch/)
          * Knowbe4 [ransomware simulator](https://www.knowbe4.com/ransomware-simulator)
@@ -156,6 +157,9 @@ Source: [LinkedIn article](https://www.linkedin.com/posts/teodorchabin_soc-cyber
 
 # Global self-assessment
 
+## Generic / compliance assessment
+* Pick-up a security standard and run an assessment thanks to [CISO Assistant](https://github.com/intuitem/ciso-assistant-community)
+
 ## SOC Self-assessment
 *	SOC Basics:
  	*	Run the [Google SecOps assessment](https://securityassessments.withgoogle.com/secops/)
@@ -165,64 +169,10 @@ Source: [LinkedIn article](https://www.linkedin.com/posts/teodorchabin_soc-cyber
 
 
 ## CERT/CSIRT self-assessment
-* Read the [OpenCSIRT cybersecurity maturity framework](https://www.enisa.europa.eu/topics/csirts-in-europe/csirt-capabilities/csirt-maturity/) from ENISA 
+* Read the [OpenCSIRT cybersecurity maturity framework](https://www.enisa.europa.eu/topics/incident-response/csirt-capabilities/csirt-maturity) from ENISA 
   * Run the OpenCSIRT, [SIM3 self-assessment](https://sim3-check.opencsirt.org/#/v1/) 
-* Read the [SOC-CMM 4CERT](https://www.soc-cmm.com/4CERT/) from CMM
-  * Run the [SOC-CMM 4CERT self-assessment tool](https://www.soc-cmm.com/downloads/latest/soc-cmm%20for%20CERT%201.0%20-%20advanced.xlsx)
+
   
-# Reporting
-
-Generate metrics, leveraging the SIRP traceability and logging capabilities to get relevant data, as well as a bit of scripting.
-
-As per Gartner, MTTR:
-
-![image](https://user-images.githubusercontent.com/16035152/203334473-d210ed37-3d2d-4e03-a468-9cf72dad8c6f.png)
-
-
-And MTTC:
-
-![image](https://user-images.githubusercontent.com/16035152/203334319-4caec07c-f999-4cc1-a506-078a72000359.png)
-
-Below are my recommendations for KPI and SLA. Unless specified, here are the recommended timeframes to compute those below KPI: 1 week, 1 month, and 6 months.
-
-## SOC/CSIRT KPI:
-* Number of alerts (SIEM).
-* Number of verified alerts (meaning, confirmed security incidents).
-* Top security incident types.
-* Top applications associated to alerts (detections).
-* Top detection rules triggering most false positives.
-* Top detection rules which corresponding alerts take the longest to be handled.
-* Top 10 SIEM searches (ie: detection rules) triggering false positives.
-* Most seen TTP in detection.
-* Most common incident types.
-* Top 10 longest tickets before closure.
-* Percentage of SIEM data that is not associated to SIEM searches (ie: detection rules).
-
-## Compliance KPI:
-* Percentage of known endpoints with company-required security solutions.
-* Percentage of critical and high-risk applications that are protected by multifactor authentication.
-* Ratio of always-on personal privileged accounts to the number of individuals in roles who should have access to these accounts.
-* Percentage of employees and contractors that have completed mandatory security training.
-* Percentage of employees who report suspicious emails for the standard organization-wide phishing campaigns.
-* Percentage of click-throughs for the organization-wide phishing campaigns in the past 12 months.
-
-
-
-## SOC/CSIRT SLA:
-* Number of false positives.
-* Number of new detection use-cases (SIEM rules) being put in production.
-* Number of new detection automation use-cases (enrichment, etc.) being put in production.
-* Number of new response automation use-cases (containment, eradication) being put in production.
-* Number of detection rules which detection capability and handling process have been confirmed with purpleteaming session, so far.
-* MTTH: for all incidents, mean time in H to handle (assign) the alerts.
-* MTTT: for all incidents, mean time in H to triage ("verify") the alerts.
-* MTTC: for critical and medium security incidents, mean time in H to handle the alerts and start mitigation steps (from triage to initial response).
-* MTTR: for critical and medium security incidents, mean time in H to handle the alerts and remediate them (from triage to remediation).
-
-## Compliance SLA:
-
-* Percentage of critical assets that have successfully run ransomware recovery assessment, in the past 12 months.
-* Average number of hours from the request for termination of access to sensitive or high-risk systems or information, to deprovisioning of all access.  
 
 
 # To go further

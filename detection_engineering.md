@@ -1,4 +1,4 @@
-# SOC detection engineering and management
+# SOC detection engineering
 
 This page deals with SOC detection engineering and management (detection use case creation, detection capabilities assessment, etc.)
 
@@ -16,16 +16,21 @@ This page deals with SOC detection engineering and management (detection use cas
 # Must read
 
 ## Threat statistics/trends 
-* MITRE, [top TTP for ransomwares](https://top-attack-techniques.mitre-engenuity.org/)
+* MITRE, [top TTP for ransomwares](https://center-for-threat-informed-defense.github.io/top-attack-techniques/#/top-10-lists)
 * MITRE, [Top 25 CWE for 2025](https://www.securityweek.com/mitre-releases-2025-list-of-top-25-most-dangerous-software-vulnerabilities/)
+* RecordedFuture [2025 Cloud Threat hunting landscape](https://www.recordedfuture.com/research/2025-cloud-threat-hunting-defense-landscape)
 * Splunk, [Top 50 cybersecurity threats](https://www.splunk.com/en_us/pdfs/gated/ebooks/top-50-cybersecurity-threats.pdf)
 * Known exploited vulnerabilities: 
-  * [CISA KEV catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
+  * CISA [KEV catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
+  * OWASP [Top 10 Web Application Security Risks](https://owasp.org/www-project-top-ten/)
+  * OWASP [top 10 for Agentic Applications](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
+* NIST [AI 800-4](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-4.pdf): Challenges to the Monitoring of Deployed AI Systems
 * CyberSecurityForMe, [Microsoft Copilot Security vulnerabilities and countermeasures](https://cybersecurityforme.com/copilot-security-vulnerabilities-and-safety-measures-for-enterprises/)
+* My [recommended list of sources](https://github.com/cyb3rxp/awesome-soc/blob/main/watch.md)
 ## SIEM rules publications
   * [Sigma HQ (detection rules)](https://github.com/SigmaHQ/sigma/tree/master/rules) 
-  * [Splunk Detections (free detection rules for Splunk)](https://research.splunk.com/detections/)
-  * [Splunk Stories for Office 365](https://research.splunk.com/stories/office_365_collection_techniques/)
+  * Splunk [Detections (free detection rules for Splunk)](https://research.splunk.com/detections/)
+  * Splunk [Stories for Office 365](https://research.splunk.com/stories/office_365_collection_techniques/)
   * [Michel De Crevoisier's Git](https://github.com/mdecrevoisier/SIGMA-detection-rules)
   * [SOC Prime](https://socprime.com/)
 ## SIEM standards
@@ -34,20 +39,27 @@ This page deals with SOC detection engineering and management (detection use cas
 ## SecOps activities
 * Ch33r10, [Enterprise purple teaming](https://github.com/ch33r10/EnterprisePurpleTeaming)
 ## Detection engineering
-* [MITRE D3FEND](https://d3fend.mitre.org/)
+### Frameworks
+* MITRE [D3FEND](https://d3fend.mitre.org/)
+* MITRE [ATLAS](https://atlas.mitre.org/)
 * [CVE2CAPEC](https://github.com/Galeax/CVE2CAPEC)
+* MITRE [EMB3D](https://emb3d.mitre.org/assets/EMB3D_Paper_09-23-24.pdf) 
 * F. Roth, [Detection engineering cheat sheet](https://mobile.twitter.com/cyb3rops/status/1592879894396293121/photo/1)
+* Ke0xes, [Detection engineering framework](https://github.com/Ke0xes/Detection-Engineering-Framework)
+### Best practices
 * Medium, ['About detection engineering'](https://cyb3rops.medium.com/about-detection-engineering-44d39e0755f0)
 * NCSC, [Detection Practices](https://www.ncsc.gov.uk/collection/building-a-security-operations-centre/detection/detection-practices)
 * Intrinsec, ['Limitations of MITRE ATT&CK' (in FR)](https://www.intrinsec.com/pilotage-dun-soc-interets-et-limites-de-la-matrice-attck/)
-* LinkedIn, [Risk assessment with ISO 27005](https://www.linkedin.com/pulse/iso-27005-risk-management-aron-lange/?trackingId=oRjjiIdY9BNjne1ALRq02A%3D%3D)
 * PECB, [ISO 27001:2022, what are the changes?](https://pecb.com/past-webinars/isoiec-270012022--what-are-the-changes)
-* ANSSI, [EBIOS RM methodology](https://www.ssi.gouv.fr/guide/ebios-risk-manager-the-method/)
-* David J. Bianco, [Pyramid of pain](https://detect-respond.blogspot.com/2013/03/the-pyramid-of-pain.html)
+### Security solutions watch
 * Tsale, [EDR telemetry](https://github.com/tsale/EDR-Telemetry)
-* MITRE ATT&CK [Evaluations: Enterprise, 2024](https://www.withsecure.com/en/expertise/campaigns/mitre-2024)
-* RULER project, [forensics tracks of common security tools](https://ruler-project.github.io/ruler-project/)
-* Uncoder.io [UncoderIO Git](https://github.com/UncoderIO/Uncoder_IO)
+* MITRE [ATT&CK Evaluations: Enterprise, 2025](https://www.withsecure.com/en/about-us/achievements-certification/industry-recognitions/mitre-attck-enterprise-evaluations/)
+* Microsoft [Security Stack Mappings](https://center-for-threat-informed-defense.github.io/security-stack-mappings/Azure/README.html)
+* AWS [Security Stack Mappings](https://center-for-threat-informed-defense.github.io/security-stack-mappings/AWS/README.html)
+### Link to risk management
+* ANSSI, [EBIOS RM methodology](https://messervices.cyber.gouv.fr/guides/en-ebios-risk-manager-method)
+* LinkedIn, [Risk assessment with ISO 27005](https://www.linkedin.com/pulse/iso-27005-risk-management-aron-lange/?trackingId=oRjjiIdY9BNjne1ALRq02A%3D%3D)
+
 ### Audit policy / forensics
 * OWASP, [logging cheat sheet](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
 * Microsoft, [Monitoring Active Directory for signs of compromise](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/security-best-practices/monitoring-active-directory-for-signs-of-compromise)
@@ -57,18 +69,31 @@ This page deals with SOC detection engineering and management (detection use cas
 * Mhtcht, [Windows DFIR artifacts collection mindmap](https://github.com/mthcht/awesome-lists/blob/a0d64850bb79902f3e3518489288eb0b62c5d9d8/Lists/CheatSheets/mthcht/windows_dfir_artifacts_collection_mindmap_high_resolution.jpg)
 * Picus Security [Active Directory Security Guide](https://www.picussecurity.com/hubfs/Threat%20Readiness%20-%20Active%20Directory%20Ebook%20-%20Q123/Picus-The-Complete-Active-Directory-Security-Handbook.pdf)
 * [EventLog Compendium](https://eventlog-compendium.streamlit.app/)
+* RULER project, [forensics tracks of common security tools](https://ruler-project.github.io/)
+
 ## IT best practices for SOC engineering
 * Atlassian, [CI/CD/CD](https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment)
+
 ## Offensive activity watch
+* David J. Bianco, [Pyramid of pain](https://detect-respond.blogspot.com/2013/03/the-pyramid-of-pain.html)
+* DarkOperator, [Mimikatz missing manual](https://github.com/darkoperator/mimikatz-missing-manual)
 * Medium, [Named pipe impersonation abuse](https://bherunda.medium.com/hunting-named-pipe-token-impersonation-abuse-573dcca36ae0)
 * Synaktiv, [Azure Entra ID pentesting mindmap](https://github.com/synacktiv/Mindmaps?s=03)
 * Rootkit POC in Rust, [MemN0ps](https://github.com/memN0ps/rootkit-rs/?tab=readme-ov-file)
+* Enaqx, [Awesome Pentest](https://github.com/enaqx/awesome-pentest?tab=readme-ov-file)
+* Frank Heat, [OffSec Notes](https://github.com/frankheat/offsecnotes)
 * A Poc, [Red Team tools](https://github.com/A-poc/RedTeam-Tools)
+* HardSoftSecuirty, [Offensive Security Tools](https://github.com/hardsoftsecurity/Offensive-Security-Tools)
+* Syslifters, [OffSec tools](https://github.com/Syslifters/offsec-tools)
 * Technics [Unprotect.it](https://unprotect.it/techniques/)
 * VVSwift, [EDR killers list](https://github.com/vvswift/Bypass-Protection0x00)
 * Mandiant, [Net-NTLM v1 rainbow tables](https://cloud.google.com/blog/topics/threat-intelligence/net-ntlmv1-deprecation-rainbow-tables?hl=en)
-* [MITRE ATLAS](https://atlas.mitre.org/)
-* DarkOperator, [Mimikatz missing manual](https://github.com/darkoperator/mimikatz-missing-manual)
+* Mandiant, [vSphere Brickstorm defender guide](https://cloud.google.com/blog/topics/threat-intelligence/vsphere-brickstorm-defender-guide?hl=en)
+
+* [LOLBAS](https://lolbas-project.github.io/): Living Off The Land Binaries, Scripts and Libraries
+* [GTFOBins](https://gtfobins.org/): curated list of Unix-like executables that can be used to bypass local security restrictions in misconfigured systems
+
+
 ## Operating systems knowledge
 * List of the expected legit system services to be found on a Windows 10/11 box, [my Git page](https://github.com/cyb3rxp/awesome-soc/blob/main/legit_Windows_services.md)
 
@@ -132,6 +157,11 @@ As per [Wikipedia](https://en.wikipedia.org/wiki/PDCA#/media/File:PDCA-Multi-Loo
 
 ### Logs:
 * Make sure your data ingestion is compliant with the datamodel you use (or, at least, the SIEM one).
+* Make sure there is no data source (sensor/logs) that do not send their data to the SIEM/XDR with no validated reason.
+
+### Already existing use cases
+* If there are alreadly existing detection use cases, double check those who never trigerred detection (or since a long time).
+* Double check the most verbose existing detection use cases, and try to fine tune them to lower the detection rate (if possible).
 
 ### Handling procedures (SOP):
 * Make sure that the handling process and procedures are clear and working fine, for the tested alerts.
@@ -176,13 +206,14 @@ Here is a suggested global overview of it, through [Open-XDR approach of Stellar
 
 
 ### TTP detection priorities identification:
-* Use [MITRE Engenuity calculator](https://ctid.mitre-engenuity.org/our-work/top-attack-techniques/):
+* Use [MITRE Engenuity calculator](https://center-for-threat-informed-defense.github.io/top-attack-techniques/#/calculator):
   * Calculate your top 10 TTP, based on your existing logging and detection capabilities.
-  * Focus on the [top TTP for ransomwares](https://top-attack-techniques.mitre-engenuity.org/): 
+  * Focus on the [top TTP for ransomwares](https://center-for-threat-informed-defense.github.io/top-attack-techniques/#/top-10-lists): 
     * T1486: Data Encrypted for Impact, T1490: Inhibit System Recovery, T1027: Obfuscated Files or Information, T1047: Windows Management Instrumentation, T1036: Masquerading, T1059: Command and Scripting Interpreter, T1562: Impair Defenses, T1112: Modify Registry, T1204: User Execution, T1055: Process Injection.
 * Leverage daily watch to maintain your knowledge about current most commonly used TTP:
-  * for instance: [Recorded Future 2021 top TTP report](https://www.recordedfuture.com/2021-malware-and-ttp-threat-landscape): 
+  * for instance: [Recorded Future 2021 top TTP report](https://www.recordedfuture.com/research/2021-malware-and-ttp-threat-landscape) and [Recorded Future H1 2025 Malware and vuln trends](https://www.recordedfuture.com/research/h1-2025-malware-and-vulnerability-trends): 
     * T1486 (Data Encrypted for Impact), T1082 (System Information Discovery), T1055 (Process Injection), T1027 (Obfuscated Files or Information), T1005 (Data from Local System).
+  * and also [RecordedFuture 2025 Cloud Threat hunting landscape](https://www.recordedfuture.com/research/2025-cloud-threat-hunting-defense-landscape)
 
 ### Leverage the native detection coverage of IT environments:
 
@@ -194,7 +225,7 @@ Here is a suggested global overview of it, through [Open-XDR approach of Stellar
 ### Leverage the documented detection coverage of security solutions:
 
 * Refer to [Security Stack Mappings](https://github.com/center-for-threat-informed-defense/security-stack-mappings)
-  * Regarding [Vectra](https://support.vectra.ai/s/article/KB-VS-1158).
+  * For instance, regarding Vectra: [Vectra's coverage of MITRE ATT&CK](https://docs.vectra.ai/reference/vectras-coverage-of-mitre-att-and-ck-and-d3fend).
 
 ### Cyber watch:
 
@@ -251,7 +282,7 @@ My recommendation, still, is to make sure not to spend all your time running aft
 could occur since that exercise is part of risk analysis. Rather, the analysis of business impact is to determine what the various effects might be in order to enable risk managers to decide how critical and sensitive a particular business system is. Similar considerations apply to cyber-physical systems and operational technologies. 
 > The risk management process relies on this foundation of asset categorization, enabling a tailored and cost-effective approach to balancing risk and reward. Business impact drives categorization (sometimes called asset classification), which drives risk identification, which will later inform risk response, risk monitoring, and communication.
 
-My recommendation is to follow the [EBIOS RM methodology](https://www.ssi.gouv.fr/guide/ebios-risk-manager-the-method/), from French ANSSI. The fourth workshop will aim at defining the "offensive scenarios" that are relevant for the environment for which you are running the risk management methodology. Those offensive scenarios should be considered as TTP (even if they are not directly referenced in MITRE ATT&CK Enterprise matrix), to be monitored by the SOC.
+My recommendation is to follow the [EBIOS RM methodology](https://messervices.cyber.gouv.fr/guides/en-ebios-risk-manager-method), from French ANSSI. The fourth workshop will aim at defining the "offensive scenarios" that are relevant for the environment for which you are running the risk management methodology. Those offensive scenarios should be considered as TTP (even if they are not directly referenced in MITRE ATT&CK Enterprise matrix), to be monitored by the SOC.
 
 
 ### Focus your SOC detection engineering taskforce on priorities:
@@ -380,6 +411,7 @@ The idea here is to follow the 'as-code' approach, wherever possible, with a cen
 
 ## Required tools
 * My recommendation: [GitLab](https://about.gitlab.com/) (or equivalent)
+* KQLab [Self-hosted KQL/SPL/ELK query manager for SOC teams](https://github.com/vinsk0h/KQLab)
 
 ## Detection-as-code
 * Implement CI/CD/CD between the SIEM rules and an internal Git repository;
@@ -406,7 +438,8 @@ The idea here is to follow the 'as-code' approach, wherever possible, with a cen
 ## Must read
 
 * Synaktiv, [Traces of Windows Remote Command Execution](https://www.synacktiv.com/en/publications/traces-of-windows-remote-command-execution.html)
-* [Awesome Detection Engineering](https://github.com/infosecB/awesome-detection-engineering).
+* InfosecB, [Awesome Detection Engineering](https://github.com/infosecB/awesome-detection-engineering)
+* 0xsyr0, [Awesome Cybersecurity handbook: SIEM](https://github.com/0xsyr0/Awesome-Cybersecurity-Handbooks/blob/main/handbooks/siem.md)
 * Naksyn, [Operating into EDRs blindspot](https://www.naksyn.com/edr%20evasion/2022/09/01/operating-into-EDRs-blindspot.html)
 * [MAGMA](https://www.betaalvereniging.nl/wp-content/uploads/FI-ISAC-use-case-framework-verkorte-versie.pdf), use case management framework.
 * Palantir, [ADS Framework](https://github.com/palantir/alerting-detection-strategy-framework), Alerting and Detection Strategies framework.

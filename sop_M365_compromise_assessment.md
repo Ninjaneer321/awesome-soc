@@ -6,6 +6,15 @@ Be aware that this procedure may take hours if not days, and is quite non-predic
 
 Version: 0.3 as of 03/20/2024
 
+## NIST (operational lifecycle labels)
+We use the commonly adopted NIST SP 800-61 lifecycle labels for operational readability:
+- Preparation
+- Detection & Analysis
+- Containment / Eradication / Recovery
+- Post-Incident Activity
+
+
+
 # 1) Admin check
 
 ## List users having privileged roles (Entra ID)
@@ -33,7 +42,7 @@ Version: 0.3 as of 03/20/2024
     > Set-OrganizationConfig -OAuth2ClientProfileEnabled $true
 
 ## Run a scan with relevant tools:
-   * [Semperis Purple Knight](https://www.purple-knight.com/active-directory-security-tool/);
+   * [Semperis Purple Knight](https://www.semperis.com/purple-knight/);
        * review in priority any item reported as "IOC" in the report.
    * [365Inspect](https://github.com/soteria-security/365Inspect)
    * [Sparrow](https://github.com/cisagov/Sparrow)
@@ -157,6 +166,11 @@ Version: 0.3 as of 03/20/2024
 
 
 
+# Post-incident activity
+
+* Incident closure checklist
+* Post-analysis / lessons learned (what to improve: detections, controls, playbooks)
+* Quality assurance checklist (data completeness, evidence, ticket quality, reporting)
 
 
 # END

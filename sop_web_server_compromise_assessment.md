@@ -6,6 +6,13 @@ Version: 0.3, as of 08/16/2024.
 
 NB: All main steps of the SOP may not be always required, and depending on the context, one may want to go through the end of the SOP anyhow after a detection, or not. 
 
+## NIST (operational lifecycle labels)
+We use the commonly adopted NIST SP 800-61 lifecycle labels for operational readability:
+- Preparation
+- Detection & Analysis
+- Containment / Eradication / Recovery
+- Post-Incident Activity
+
 
 # Prerequisites
 
@@ -44,7 +51,7 @@ NB: All main steps of the SOP may not be always required, and depending on the c
 
 - Run the OpenCTI script to search for those IP addresses in the TIP;
   - If detection, mark the corresponding IP address as an IOC, and consider to block it at firewall level ASAP.
-- Manually check all the destination IP addresses, against online tools like [CyberGordon](cybergordon.com);
+- Manually check all the destination IP addresses, against online tools like [CyberGordon](https://cybergordon.com);
   - If detection, mark the corresponding IP address as an IOC, and consider to block it at firewall level ASAP.
   
 ## Local users check
@@ -243,5 +250,11 @@ NB: All main steps of the SOP may not be always required, and depending on the c
 - Install an EDR, or at least [SysmonForLinux](https://github.com/Sysinternals/SysmonForLinux), on the server(s).
 - Enable strong authentication wherever possible.
 - Harden admin workstations.
+
+
+## Post-incident activity
+* Incident closure checklist
+* Quality assurance checklist (data completeness, evidence, ticket quality, reporting)
+
 - Update server(s) backups.
 

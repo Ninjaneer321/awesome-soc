@@ -1,0 +1,120 @@
+# Gen AI and machine learning opportunities for a SOC and CSIRT
+[WIP]
+
+This page deals with what Generative AI, AI agents, and machine learning can effectively bring to a SOC (**plus their known downsides**) and/or CSIRT. No marketing speech here, only cybersec watch and field feedback based intel.
+
+
+# Must read
+
+## Best practices
+* ETSI, [Baseline Cyber Security Requirements for  AI Models and Systems](https://www.etsi.org/deliver/etsi_en/304200_304299/304223/02.01.01_60/en_304223v020101p.pdf)
+* ENISA, [Multilayer framework for good cybersecurity practices for AI](https://www.enisa.europa.eu/publications/multilayer-framework-for-good-cybersecurity-practices-for-ai) 
+* OWASP, [LLM and Gen AI security best practices](https://genai.owasp.org/resource/llm-and-gen-ai-data-security-best-practices/)
+* NIST, [AI 600](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf): Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile
+* NIST [AI 800-4](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-4.pdf): Challenges to the Monitoring of Deployed AI Systems
+* NIST, [R 8596](https://csrc.nist.gov/pubs/ir/8596/iprd): Cybersecurity Framework Profile for Artificial Intelligence
+* Medium, [Prompt engineering](https://medium.com/@egopgogojob/prompt-engineering-explained-understanding-top-k-top-p-temperature-and-advanced-techniques-b7ae7fa49fda)
+
+
+## Field feedback 
+* Microsoft [Turning threat reports into detection insights with AI](https://www.microsoft.com/en-us/security/blog/2026/01/29/turning-threat-reports-detection-insights-ai/)
+* Fr0gger, [Malware Reverse Engineering is no longer a human problem!](https://x.com/fr0gger_/status/2028014798546378938?s=20)
+
+
+## Threat landscape
+* CISCO, [State of AI Security 2026](https://www.cisco.com/site/us/en/products/security/state-of-ai-security.html)
+* CrowdStrike, [Global threat landscape 2026: AI Accelerates Adversaries and Reshapes the Attack Surface](https://www.crowdstrike.com/en-us/press-releases/2026-crowdstrike-global-threat-report/)
+* Google GTIG, [Adversaries Leverage AI for Vulnerability Exploitation, Augmented Operations, and Initial Access](https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access?hl=en)
+* Google GTIC, [Continued Integration of AI for Adversarial Use](https://www.brighttalk.com/webcast/18282/669120?utm_campaign=communication_missed_you&utm_medium=email&utm_source=brighttalk-transact&player-preauth=WpeByEIABmlF9OmrZ8Mr5xMzcFT8gfHVp76f5Ed4%2FaI%3D&utm_content=webcast)
+* OWASP, [Top 10 for Agentic Applications](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
+* CyberSecurityForme, [Microsoft Copilot Security vulnerabilities and safety measures](https://cybersecurityforme.com/copilot-security-vulnerabilities-and-safety-measures-for-enterprises/)
+
+
+## Knowledge bases
+* Jivoi, [Awesome ML for cybersecurity](https://github.com/jivoi/awesome-ml-for-cybersecurity)
+
+
+# Machine learning use cases for a SOC
+
+## Network trafic abnomalies detection
+
+* **RAW data:** Sysmon logs, DNS logs, firewall logs, router logs
+* **Goal of the detection:** detect unusual trafic peaks that could become denial of service, or information leak
+* **Use of machine learning:** learn usual trafic, including common sources and common peaks (frequency, protocol, sources, etc.), and then alert on uncommon/unseen sources and peaks.
+* **Field feedback:** interesting but likely prone to false positives, and may require months of training plus a huge amount of data to train the machine learning system.
+
+
+## Binaries execution abnomalies detection
+
+* **RAW data**: Sysmon logs, System (Windows/linux) logs, HIDS logs, EDR logs
+* **Goal of the detection:**
+   * detect never previously seen files that are being executed = > potential new malware/variant
+   * detect files that are suddenly and unexpectedly executed on a large number of endpoints  = > potential infection spread or lateral movement
+* **Use of machine learning:** learn usually executed files (path, hash) to alert on unexpected/uncommon executions
+* **Field feedback:** interesting but likely prone to false positives if you don't have a good systems/applications inventory and required logs, to train the machine learning system.
+
+
+
+
+
+# Gen AI / LLM use cases for a SOC
+
+## Analysis acceleration (alert/sample)
+
+### Command line
+
+* **Context:** EDR alert for a process or a file
+* **Elements to be analyzed:** long commandline with numerous arguments and potential obfuscation
+* **Use of Gen AI:** quickly understand the command line and then determine wether it is malicious or not, based on the alert details.
+* **Field feedback:** quite efficient and relevant.
+
+
+### Registry keys
+
+* **Context:** EDR alert for a registry key change/access/deletion
+* **Elements to be analyzed:** unknown registry key or value, as well as its impact on the system/security configuration
+* **Use of Gen AI:** quickly understand the registry key use (values, effects), and then determiner wether it is malicious or not, based on the alert details.
+* **Field feedback:** quite efficient and relevant.
+
+
+### File sample
+
+* **Context:** you get/grab a sample from an user submission or a "suspicious"-type alert (AV/EDR, proxy, SEG, etc.)
+* **Element to be analyzed:** file sample
+* **Use of Gen AI:** quickly and automatically produce static analysis, CTI search automation, evasion/persistence detection, and network behavior reports...
+* **Field feedback:** See [Malware Reverse Engineering is no longer a human problem!](https://x.com/fr0gger_/status/2028014798546378938?s=20) from Thomas Roccia:
+  * Static Analysis: Extract binary features, detect packing/obfuscation
+  * Enrichment and Pivoting: OSINT via CTI tools, identify related campaigns/families
+  * Reverse Engineering: Disassemble key functions, detect evasion/persistence (e.g., via Unprotect), analyze network behaviors
+  * Output Generation: Extract IOCs, map to MITRE ATT&CK, create YARA rules (tested/uploaded for hunting), generate diagrams/graphs, and compile a grounded report with recommendations.
+
+
+### Business app 
+
+* **Context:** specific business app associated to an EDR/NDR alert 
+* **Elements to be analyzed:** business app activity and artefacts (binaries, files tree, network traffic, etc.)
+* **Use of Gen AI:** quickly have an overview of the business app components, architecture, use cases, then determine wether the alert is confirmed or not, based on the alert details.
+* **Field feedback:** quite useful but may be challenging anyhow if the business app is a proprietary one, with almost no open documentation.
+
+
+## Watch 
+
+* **Context:** there are more and more papers regarding cyberthreats analysis, plus cybersecurity standards, and all of that is time-consuming to read
+* **Elements to be analyzed:** reports (PDF), blog posts and KB articles
+* **Use of Gen AI:** quickly summarize the reports and texts, to get the msot important part of them with a global understanding
+* **Field feedback:** really efficient and relevant
+* **Real life example:** ask ChatGPT, or [Mistral.ai](https://mistral.ai/products/le-chat) to summarize the following [CTI report from Sekoia](https://blog.sekoia.io/oysterloader-unmasked-the-multi-stage-evasion-loader/), which is supposed to take **19min** to read. The generated sum-up would only take 4-5 min reading :)
+
+
+
+## Cyber-attack understanding
+
+### Security solutions detections 
+
+* **Context:** an alert from EDR, NDR, SEG, SWG, ITDR, CASB, etc.  
+* **Elments to be analyzed:** artefacts associated to the alert, as well as the attack type itself as per the detected attack name
+* **Use of Gen IA:** quickly understand the attack type (TTP) and the ways it works, then determine wether the alert is confirmed or not, based on the information it contains.
+* **Field feedback:** can be useful but may lead to wrong assumptions if analysts don't take the time to deep dive and search, to go beyong the first Gen AI results.
+
+
+
